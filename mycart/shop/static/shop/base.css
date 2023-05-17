@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    background-color: cornflowerblue;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo {
+    padding: 5px 5px;
+}
+
+.logo h1 {
+    font-size: 30px;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar nav ul li {
+    list-style: none;
+    margin: 0px 5px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 5px;
+    font-size: 20px;
+}
+
+.navbar nav ul li a:hover {
+    text-decoration: none;
+    color: rgb(187, 83, 23);
+    padding: 5px 5px;
+}
+
+/* Popup container */
+.popup {
+    position: relative;
+    /* display: inline-block; */
+    cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    width: 400px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    top: 35px;
+    left: -100%;
+    margin-left: -80px;
+    text-transform: capitalize;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    transform: rotate(180deg);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

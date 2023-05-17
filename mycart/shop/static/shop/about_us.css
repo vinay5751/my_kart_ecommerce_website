@@ -1,0 +1,93 @@
+.about_us {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+.about_us::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width: 100%;
+    height: 35%;
+    background-color: rgb(41 64 104);
+    z-index: -1;
+}
+
+.about_us_content {
+    color: white;
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+
+}
+
+.about_us_content h1,
+.about_us_content h2 {
+    text-transform: capitalize;
+}
+
+.about_us_content p {
+    font-style: italic;
+}
+
+.our_achivements {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin-top: 40px;
+
+}
+
+
+
+.our_achivements::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -24px;
+    left: 0;
+    width: 100%;
+    height: 118%;
+    background-color: rgb(100 149 237);
+    z-index: -2;
+}
+
+.our_achivements h1 {
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+
+.our_achivement_block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+}
+.achivements {
+    border: 2px solid black;
+    margin: 5px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.achivements h2 {
+    text-transform: capitalize;
+
+}
+
+.achivements p {
+    padding: 30px;
+}

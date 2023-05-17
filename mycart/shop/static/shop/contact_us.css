@@ -1,0 +1,22 @@
+.form {
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form form input {
+    margin: 10px 0px;
+    padding: 10px 0px;
+}
+
+.form #submit {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 15px;
+}

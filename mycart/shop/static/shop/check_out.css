@@ -1,0 +1,21 @@
+.list_group {
+    width: 50%;
+    margin: auto;
+}
+
+.list_group {
+    margin-top: 20px;
+}
+
+.list_group h1 {
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.list_items li {
+    /* text-decoration: none; */
+    list-style: none;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+}

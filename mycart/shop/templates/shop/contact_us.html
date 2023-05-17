@@ -1,0 +1,21 @@
+{% extends "shop/base.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="/static/shop/contact_us.css">
+{% endblock css %}
+
+
+{% block title %}Contact Us{% endblock title %}
+
+{% block content %}
+
+<section class="form">
+    <form action="/shop/contact_us" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit" id="submit">
+    </form>
+</section>
+
+
+{% endblock content %}

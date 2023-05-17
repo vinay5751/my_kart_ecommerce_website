@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/static/shop/base.css" />
+        {% block css %}{% endblock css %}
+
+        <title>{% block title %}{% endblock title %} | My Cart</title>
+    </head>
+
+    <body>
+        <section class="navbar">
+            <div class="logo">
+                <h1>My Cart</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/shop">Home</a></li>
+                    <li><a href="/shop/about_us">About Us</a></li>
+                    <li><a href="/shop/contact_us">Contact Us</a></li>
+                    <li>
+                        <a href="#" class="cart popup" onclick="popup()">
+                            Cart(<span id="cart">0</span>)
+                            <span class="popuptext" id="myPopup"> </span>
+                        </a>
+                    </li>
+                    <li><a href="/shop/check_out">Checkout</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        {% block content%}{% endblock content%} {% block js %}{% endblock js %}
+        <script>
+            function popup() {
+                var popup = document.getElementById("myPopup");
+                popup.classList.toggle("show");
+            }
+        </script>
+    </body>
+</html>

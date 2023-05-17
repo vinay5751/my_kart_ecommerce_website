@@ -1,0 +1,21 @@
+{% extends 'shop/base.html' %} {%block title %} Checkout {%endblock title %}
+{%block css %}
+<link rel="stylesheet" href="/static/shop/check_out.css" /> {%endblock css %}
+{%block content%}
+<section class="list_group">
+    <h1>the items in your cart.</h1>
+    <ul class="list_items">
+        <li class="items">
+            item
+            <span>qty</span>
+        </li>
+    </ul>
+
+    <ul class="list_items">
+        <li class="items">
+            item
+            <span>qty</span>
+        </li>
+    </ul>
+</section>
+{% endblock content%}

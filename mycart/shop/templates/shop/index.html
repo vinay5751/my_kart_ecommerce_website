@@ -1,0 +1,44 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="/static/shop/index.css">
+{% endblock css %}
+{% block title %}Shop{% endblock title %}
+{% block content %}
+
+{% for products,category in all_products %}
+<section class="product">
+    <h2 class="product-category">{{category}}</h2>
+    <button class="pre-btn"><img src="/static/images/arrow.png" alt=""></button>
+    <button class="nxt-btn"><img src="/static/images/arrow.png" alt=""></button>
+    <div class="product-container">
+        {% for product in products %}
+        <div class="product-card">
+            <div class="product-image">
+                <span class="discount-tag">50% off</span>
+                <img src="/media/{{product.image}}" class="product-thumb" alt="">
+                <span id="divpr{{product.id}}" class="divpr"> 
+                    <button id='pr{{product.id}}' class="card-btn cart">add to cart</button>
+                </span>
+                <a href="/shop/product/{{product.id}}">
+                    <button id='qv{{product.id}}' class="card-btn prod-view">product view</button>
+                </a>
+                
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand" id="namepr{{product.id}}" >{{product.product_name}}</h2>
+                <p class="product-short-description">{{product.desc}}</p>
+                <span class="price">₹{{product.price}}</span>
+                {% comment %} <span class="actual-price">{{product.price}}</span> {% endcomment %}
+            </div>
+        </div>
+        
+        {% endfor %}
+</section>
+<hr>    
+{% endfor %}
+{% endblock content %}
+{% block js %}
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="/static/shop/js/index.js"></script>
+{% endblock js %}
